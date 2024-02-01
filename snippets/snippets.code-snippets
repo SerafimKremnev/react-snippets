@@ -1,0 +1,33 @@
+{
+  "create component": {
+    "prefix": "dc",
+    "body": [
+   "import { FC } from 'react';",
+   "import { cva } from 'class-variance-authority';"
+   "\n",
+      "interface Props {",
+   "}",
+   "\n",
+   "const cvaRoot = cva(['${TM_FILENAME_BASE}-cvaRoot', '']);"
+   "\n",
+   "const ${TM_FILENAME_BASE}: FC<Props> = () => {"
+   "\treturn (",
+   "\t\t<div className={cvaRoot()}>",
+   "\t\t\t$1",
+   "\t\t</div>",
+   "\t)",
+   "}",
+   "\n",
+   "export default ${TM_FILENAME_BASE}"
+    ]
+  },
+  "cva varriable": {
+    "prefix": "ccva",
+    "body": [
+      "const cva$1 = cva([",
+      "\t'${TM_FILENAME_BASE}-cva$1',",
+      "\t'$2',",
+      "]);"
+    ]
+  }
+}
